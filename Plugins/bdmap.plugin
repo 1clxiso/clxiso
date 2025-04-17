@@ -9,6 +9,12 @@ DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, httpdns.baidubce.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
 
+#自主添加
+DOMAIN-SUFFIX,lbs.map.baidu.com,REJECT
+DOMAIN-SUFFIX,eclick.baidu.com,REJECT
+DOMAIN-KEYWORD,adtrack,REJECT
+DOMAIN-KEYWORD,adsdk,REJECT
+
 [Rewrite]
 # 组件包
 ^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=du_aide_module reject-dict
@@ -29,6 +35,7 @@ DOMAIN, lc.map.baidu.com, REJECT
 ^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovareject-dict
 ^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo reject-dict
 
+
 [Script]
 # 组件包
 http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bdmap.js, tag = 组件包
@@ -38,3 +45,5 @@ http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/p
 
 [MITM]
 hostname = newclient.map.baidu.com, yongche.baidu.com
+
+*.baidu.com,*.map.baidu.com,afd.baidu.com,afdconf.baidu.com,lbs.map.baidu.com  #自主添加
