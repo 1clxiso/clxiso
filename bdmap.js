@@ -1,6 +1,6 @@
 // 2023-05-05 18:35
 
-/*const url = $request.url;
+const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
@@ -42,10 +42,10 @@ if (url.includes("/usercenter/mine/page")) {
   }
 }
 
-$done({ body: JSON.stringify(obj) });*/
+$done({ body: JSON.stringify(obj) });
 
 // 2025-05-06 10:00
-const url = $request.url;
+/*const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
