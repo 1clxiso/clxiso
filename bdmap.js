@@ -9,6 +9,7 @@ if (url.includes("/usercenter/mine/page")) {
     "car", // 我的车辆
     "gold", // 金币商城等活动
     "voice" // 语音包
+    "caricon" //车标
   ];
   if (obj.data) {
     item.forEach((i) => {
