@@ -8,8 +8,8 @@ if (url.includes("/usercenter/mine/page")) {
   const item = [
     "car", // 我的车辆
     "gold", // 金币商城等活动
-    "voice" // 语音包
-    "caricon" //车标
+    "voice" ,// 语音包
+    "caricon" ,//车标
     "sport_card" //百度运动
   ];
   if (obj.data) {
