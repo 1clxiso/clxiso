@@ -10,6 +10,7 @@ if (url.includes("/usercenter/mine/page")) {
     "gold", // 金币商城等活动
     "voice" // 语音包
     "caricon" //车标
+    "sport_card" //百度运动
   ];
   if (obj.data) {
     item.forEach((i) => {
