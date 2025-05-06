@@ -4,7 +4,7 @@ const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("/usersystem/mine/page")) {
+if (url.includes("/usercenter/mine/page")) {
   const item = [
     "car", // 我的车辆
     "gold", // 金币商城等活动
