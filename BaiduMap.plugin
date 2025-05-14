@@ -9,8 +9,8 @@ DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, httpdns.baidubce.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
 
-# > 百度地图
 
+[Rewrite]
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
 ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) reject
 ^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg reject
