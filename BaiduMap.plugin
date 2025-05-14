@@ -1,5 +1,16 @@
+#!name = 百度地图
+#!desc = 移除广告
+#!author = clxiso
+#!date = 2025-05-14  23:44
+
+[Rule]
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, afdconf.baidu.com, REJECT
+DOMAIN, httpdns.baidubce.com, REJECT
+DOMAIN, lc.map.baidu.com, REJECT
+
 # > 百度地图
-hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
+
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
 ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) reject
 ^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg reject
@@ -7,5 +18,7 @@ hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.c
 ^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg reject-200
 ^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png reject-img
 
-# > 百度地图
+[Scrit]
 http-response ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js, requires-body=true, timeout=60, tag=百度地图广告, enable={bdduditu_enable}
+[Mitm]
+hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
